@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+{% block titulo%} Inicio {% endblock %}http://127.0.0.1:8000/
+
+{% block contenido%}  
+
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Lexend+Exa:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <header>
+        <nav>
+            <img src="static/images/logo.png" alt="" class="logo">
+            <div class="navigation">
+                <a href="" class="opt">Autos</a>
+                <a href="" class="opt">Locales</a>
+                <a href="" class="opt">Contacto</a>
+            </div>
+            <a href="" class="account">Sign In</a>
+        </nav>
+    </header> -->
+    <main>
+        <div class="hero">
+            <h1 class="motd-hero">Alquila el <br>Auto de tus sueños</h1>
+            <div class="searchBar">
+                
+            </div>        
+        </div>
+        <div class="marcasSlider">
+            <img src="static/images/index/nissan.png" alt="" class="logosSlider">
+            <img src="static/images/index/lamborghini.webp" alt="" class="logosSlider gris">
+            <img src="static/images/index/Toyota.png" alt="" class="logosSlider gris">
+            <img src="static/images/index/hyundai.png" alt="" class="logosSlider gris logosSlider4">
+            <img src="static/images/index/honda.png" alt="" class="logosSlider gris">
+            <img src="static/images/index/volkswagen.webp" alt="" class="logosSlider gris">
+            <img src="static/images/index/porsche.png" alt="" class="logosSlider">
+        </div>
+        <div class="mainCardsCont">
+            <div class="featuredSection">
+                <div class="firstField cardsField">
+                    <div class="topPagination">
+                        <h2>Destacados <span class="star-icon">⭐</span></h2>
+                        <div class="pagination">
+                            <span>1/6</span>
+                            <button class="prev-arrow">←</button>
+                            <button class="next-arrow">→</button>
+                        </div>
+                    </div>
+                    <div class="cardsContainer">
+                        <div class="card">
+                            <img src="static/images/index/porsche-8327242.jpg" alt="Car Image">
+                            <div class="card-content">
+                                <h3>2045 Corolla</h3>
+                                <p>80082 Millas</p>
+                                <div class="brand">
+                                    <img src="static/images/index/Toyota.png" alt="Toyota Logo" class="cardLogo">
+                                    <span>Toyota</span>
+                                </div>
+                                <div class="cardBottom">
+                                    <p class="price">$30 <span>Precio/Día</span></p>
+                                    <button class="rent-button">Alquilar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="static/images/index/porsche-8327242.jpg" alt="Car Image">
+                            <div class="card-content">
+                                <h3>2045 Corolla</h3>
+                                <p>80082 Millas</p>
+                                <div class="brand">
+                                    <img src="static/images/index/Toyota.png" alt="Toyota Logo" class="cardLogo">
+                                    <span>Toyota</span>
+                                </div>
+                                <div class="cardBottom">
+                                    <p class="price">$30 <span>Precio/Día</span></p>
+                                    <button class="rent-button">Alquilar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="static/images/index/porsche-8327242.jpg" alt="Car Image">
+                            <div class="card-content">
+                                <h3>2045 Corolla</h3>
+                                <p>80082 Millas</p>
+                                <div class="brand">
+                                    <img src="static/images/index/Toyota.png" alt="Toyota Logo" class="cardLogo">
+                                    <span>Toyota</span>
+                                </div>
+                                <div class="cardBottom">
+                                    <p class="price">$30 <span>Precio/Día</span></p>
+                                    <button class="rent-button">Alquilar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="static/images/index/porsche-8327242.jpg" alt="Car Image">
+                            <div class="card-content">
+                                <h3>2045 Corolla</h3>
+                                <p>80082 Millas</p>
+                                <div class="brand">
+                                    <img src="static/images/index/Toyota.png" alt="Toyota Logo" class="cardLogo">
+                                    <span>Toyota</span>
+                                </div>
+                                <div class="cardBottom">
+                                    <p class="price">$30 <span>Precio/Día</span></p>
+                                    <button class="rent-button">Alquilar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="secondField cardsField">
+                    <div class="topPagination">
+                        <h2>Nuevo Ingreso</h2>
+                        <div class="pagination">
+                            <span>1/6</span>
+                            <button class="prev-arrow">←</button>
+                            <button class="next-arrow">→</button>
+                        </div>
+                    </div>
+                    <div class="cardsContainer">
+                        <div class="card">
+                            <img src="static/images/index/porsche-8327242.jpg" alt="Car Image">
+                            <div class="card-content">
+                                <h3>2045 Corolla</h3>
+                                <p>80082 Millas</p>
+                                <div class="brand">
+                                    <img src="static/images/index/Toyota.png" alt="Toyota Logo" class="cardLogo">
+                                    <span>Toyota</span>
+                                </div>
+                                <div class="cardBottom">
+                                    <p class="price">$30 <span>Precio/Día</span></p>
+                                    <button class="rent-button">Alquilar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="static/images/index/porsche-8327242.jpg" alt="Car Image">
+                            <div class="card-content">
+                                <h3>2045 Corolla</h3>
+                                <p>80082 Millas</p>
+                                <div class="brand">
+                                    <img src="static/images/index/Toyota.png" alt="Toyota Logo" class="cardLogo">
+                                    <span>Toyota</span>
+                                </div>
+                                <div class="cardBottom">
+                                    <p class="price">$30 <span>Precio/Día</span></p>
+                                    <button class="rent-button">Alquilar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="static/images/index/porsche-8327242.jpg" alt="Car Image">
+                            <div class="card-content">
+                                <h3>2045 Corolla</h3>
+                                <p>80082 Millas</p>
+                                <div class="brand">
+                                    <img src="static/images/index/Toyota.png" alt="Toyota Logo" class="cardLogo">
+                                    <span>Toyota</span>
+                                </div>
+                                <div class="cardBottom">
+                                    <p class="price">$30 <span>Precio/Día</span></p>
+                                    <button class="rent-button">Alquilar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="static/images/index/porsche-8327242.jpg" alt="Car Image">
+                            <div class="card-content">
+                                <h3>2045 Corolla</h3>
+                                <p>80082 Millas</p>
+                                <div class="brand">
+                                    <img src="static/images/index/Toyota.png" alt="Toyota Logo" class="cardLogo">
+                                    <span>Toyota</span>
+                                </div>
+                                <div class="cardBottom">
+                                    <p class="price">$30 <span>Precio/Día</span></p>
+                                    <button class="rent-button">Alquilar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <a href="#"><img src="static/svg/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="static/svg/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="static/svg/tiktok.svg" alt="TikTok"></a>
+            <a href="#"><img src="static/svg/x.svg" alt="X"></a>
+            <a href="#"><img src="static/svg/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+        <div class="footer-logo">
+            <img src="static/images/LOGO.png" alt="Car Logo" class="carLogo">
+        </div>
+        <div class="footer-text">
+            <p class="copyright">Copyright © 2024 RER-QA Consulting</p>
+            <p><a href="#">Información legal</a> | <a href="#">Políticas de privacidad</a></p>
+        </div>
+        <p class="footerCredits">Made And Design By <a>2V</a> Prod</p>
+    </footer>
+
+</body>
+</html>
+
+{% endblock %}

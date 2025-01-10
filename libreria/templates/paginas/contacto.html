@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block titulo%} Contacto {% endblock %}
+
+{% block contenido%} 
+
+    <div class="container mt-5">
+      <div class="text-center">
+        <h1>Contáctenme</h1>
+      </div>
+      <form>
+        <div class="mb-3">
+          <label for="nombres" class="form-label">Nombres Completos *</label>
+          <input type="text" class="form-control" id="nombres" required>
+        </div>
+        <div class="mb-3">
+          <label for="apellidos" class="form-label">Apellidos *</label>
+          <input type="text" class="form-control" id="apellidos" required>
+        </div>
+        <div class="mb-3">
+          <label for="departamento" class="form-label">Departamento *</label>
+          <input type="text" class="form-control" id="departamento" required>
+        </div>
+        <div class="mb-3">
+          <label for="provincia" class="form-label">Provincia *</label>
+          <input type="text" class="form-control" id="provincia" required>
+        </div>
+        <div class="mb-3">
+          <label for="distrito" class="form-label">Distrito *</label>
+          <input type="text" class="form-control" id="distrito" required>
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono *</label>
+          <input type="tel" class="form-control" id="telefono" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email *</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="fecha" class="form-label">Fecha de contacto disponible *</label>
+          <input type="date" class="form-control" id="fecha" required>
+        </div>
+        <div class="mb-3">
+          <label for="horario" class="form-label">Horario disponible *</label>
+          <input type="time" class="form-control" id="horario" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+
+{% endblock %}

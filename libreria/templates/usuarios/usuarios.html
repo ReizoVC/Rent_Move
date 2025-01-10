@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block titulo%} Usuarios {% endblock %}
+
+{% block contenido%} 
+
+<div class="card">
+    <div class="card-header">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+        <a
+        name=""
+        id=""
+        class="btn btn-success"
+        href="{% url 'crear_usuario'%}"
+        role="button"
+        >Agregar nuevo usuario</a
+    >
+    </div>
+
+    <div class="card-body">
+        <h4 class="card-title">Usuarios </h4>
+        
+
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre de Usuario</th>
+                        <!-- <th scope="col">Contraseña</th> -->
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">DNI</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Fecha Nacimiento</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">N° Licencia</th>
+                        <th scope="col">Expiración Licencia</th>
+                        <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usuario in usuarios %}
+                    <tr class="">
+                        <td scope="row">{{ usuario.id }}</td>
+                        <td>{{ usuario.username }}</td>
+                        <!-- <td>{{ usuario.password }}</td> -->
+                        <td>{{ usuario.Nombres }}</td>
+                        <td>{{ usuario.Apellidos }}</td>
+                        <td>{{ usuario.DNI }}</td>
+                        <td>{{ usuario.Email }}</td>
+                        <td>{{ usuario.Telefono }}</td>
+                        <td>{{ usuario.FechaNacimiento }}</td>
+                        <td>{{ usuario.Direccion }}</td>
+                        <td>{{ usuario.NroLicencia }}</td>
+                        <td>{{ usuario.FechaExpLicencia }}</td>                      
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Acciones">
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-info"
+                                    href="{% url 'editar_usuario' usuario.id %}"
+                                    role="button"
+                                >Editar</a>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-danger"
+                                    href="{% url 'eliminar_usuario' usuario.id %}"
+                                    role="button"
+                                >Borrar</a>
+                            </div>
+                        </td>
+                        
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>
+</div>
+
+
+{% endblock %}

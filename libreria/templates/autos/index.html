@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block titulo%} Lista de autos {% endblock %}
+
+{% block contenido%} 
+
+<div class="card">
+    <div class="card-header">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        
+        <a
+            name=""
+            id=""
+            class="btn btn-success"
+            href="{% url 'crear_auto'%}"
+            role="button"
+            >Agregar nuevo auto</a
+        >
+    </div>
+
+    <div class="card-body">
+        <h4 class="card-title">Autos </h4>
+        
+
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Disponibilidad</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for auto in autos %}
+                    <tr class="">
+                        <td scope="row">{{ auto.id }}</td>
+                        <td>{{ auto.Marca }}</td>
+                        <td>{{ auto.Modelo }}</td>
+                        <td>{{ auto.Anio }}</td>
+                        <td>{{ auto.Placa }}</td>
+                        <td>{{ auto.Disponibilidad }}</td>
+                        <td> <a
+                            name=""
+                            id=""
+                            class="btn btn-info"
+                            href="{% url 'editar_auto' auto.id %}"
+                            role="button"
+                            >Editar</a>
+
+                            |
+
+                            <a
+                            name=""
+                            id=""
+                            class="btn btn-danger"
+                            href="{% url 'eliminar_auto' auto.id %}"
+                            role="button"
+                            >Borrar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>
+</div>
+
+
+
+{% endblock %}

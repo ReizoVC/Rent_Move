@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #252525;
+  }
+  
+  .logo {
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  /* header {
+    background-color: rgba(175, 175, 175, 0.4);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    position: fixed;
+    padding: 5px;
+    top: 0;
+    font-family: "League Spartan", serif;
+  } */
+  
+  /* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    margin: 0 auto;
+  } */
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+  }
+  
+  .opt {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  
+  .account {
+    display: flex;
+    color: #E4D3FD;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    background-color: #100E2E;
+    padding: 10px 30px;
+    border-radius: 20px;
+  }
+  
+  .account:hover {
+    color: #8571A9;
+  }
+  
+  /* main {
+    width: 100%;
+    margin: 0 auto;
+  }
+   */
+  .hero {
+    background-image: url(../images/index/image9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 21/9;
+    font-family: "League Spartan", serif;
+    margin-top: 100px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-bottom: 6%;
+  }
+  
+  .marcasSlider {
+    display: grid;
+    height: 15vh;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-content: center;
+  }
+  
+  .logosSlider {
+    height: 80px;
+  }
+  
+  .logosSlider4 {
+    height: 70px;
+    margin: auto 20px;
+  }
+  
+  .gris {
+    filter: opacity(40%);
+    z-index: -10;
+  }
+  
+  .motd-hero {
+    font-weight: 700;
+    color: #fff;
+    font-size: 5rem;
+  }
+  
+  .searchBar {
+    width: 70%;
+    height: 15%;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  
+  .mainCardsCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: "League Spartan", serif;
+  }
+  
+  .featuredSection {
+    width: 100%;
+  }
+  
+  .cardsField {
+    margin: 50px 0;
+  }
+  
+  .firstField {
+    margin-top: 0;
+  }
+  
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .card-content p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .card-content .brand {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .card-content .brand img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .card-content .price {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .card-content .price span {
+    font-size: 0.8em;
+    color: #777;
+  }
+  
+  .card-content .rent-button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .cardLogo {
+    object-fit: scale-down !important;
+  }
+  
+  .rent-button:hover {
+    background-color: #3700b3;
+  }
+  
+  .pagination span {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #777;
+  }
+  
+  .prev-arrow,
+  .next-arrow {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #777;
+  }
+  
+  .topPagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    margin: 10px auto;
+    padding-right: 2%;
+  }
+  
+  .cardBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer {
+    background-color: #100E2E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: "Lexend Exa", serif;
+    font-size: 14px;
+  }
+
+
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .footer-icons a {
+    margin: 0 10px;
+  }
+  
+  .footer-icons img {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .footer-text p {
+    margin: 5px 0;
+  }
+  
+  .footer-text a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+  
+  .carLogo {
+    border-radius: 50%;
+  }
+  
+  .copyright {
+    color: #969696;
+  }
+  
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .footerCredits {
+    display: flex;
+    justify-self: flex-end;
+    gap: 5px;
+    cursor: default;
+  }
+  .footerCredits a {
+    color: #7647FE;
+    font-weight: 800;
+  }
+  
+  .footerCredits a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /*# sourceMappingURL=styles.css.map */
+  
